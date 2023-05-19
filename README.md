@@ -17,8 +17,11 @@ To create an interactive, educational game that will help children (ages 2+) rec
 <img width="386" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/12097fc9-6d83-47b7-b612-bb1d046ec763">
 
 
-### How to Get Started
+## How to Get Started
 * Research: online, peers, office hours
 * Find a skeleton plan that seems replicable based on current knowledge of CSS, JS, HTML
 * Create detailed outline: pesudocoding + wireframing
 * GO, GO, GO!
+
+## Project Timeline
+* https://trello.com/invite/b/YXoPgLF7/ATTIef86fa6922cc1910bc9192a34ea6624bA0DA0BD2/matchinggameabcs
