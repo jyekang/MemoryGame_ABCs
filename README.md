@@ -11,7 +11,8 @@ To create an interactive, educational game that will help children (ages 2+) rec
 <img width="240" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/3e94f500-ef93-4c31-ad65-542cdf2383c6">
 
 * If the letters on the cards do not match, the cards are flipped face down, until all the cards are correctly matched
-<img width="243" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/feb4e472-5746-477e-85c4-c573619ab47e"><img width="243" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/b8387347-d959-4ac6-8d9b-45c643f2f3f5">
+<img width="243" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/feb4e472-5746-477e-85c4-c573619ab47e">
+<img width="243" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/b8387347-d959-4ac6-8d9b-45c643f2f3f5">
 
 * If the letters on the cards match, they are removed from the board
 <img width="386" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/12097fc9-6d83-47b7-b612-bb1d046ec763">
