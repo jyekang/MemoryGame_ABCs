@@ -14,10 +14,6 @@ const btn6 = document.querySelector('#btn6')
 
 // the three grand rules of coding according to javis friend
 // 1. make it work
-
-
-
-
 // 2. rule number make pretty
 // 3. make run fast
 
