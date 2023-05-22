@@ -141,15 +141,28 @@ for(let i = 0; i < backFaceButtons.length; i++) {
             gameState.firstSelected.element.style.opacity = 0; 
             gameState.lastSelected.element.style.opacity = 0;  
             gameState.numberOfFaceUpCards = 0
-
-            
-            
             
             // /** @type {typeof cardObj6 | undefined } */
             // gameState.lastSelected = backFaceButtons[i].backImg;
             // backFaceButtons[i].element.disabled = false;
         }
 
+       //@@@@@@@@@@@ //check if all card opacity === 0 @@@@@@@@@@//
+       let counter = 0
+
+        for(let i = 0; i < backFaceButtons.length; i++) {
+           if (backFaceButtons[i].element.style.opacity === "0") {
+               counter = counter + 1
+           }
+        }
+
+        //we have to check that the number in counter is the same number of the cards we have (.length)
+
+        if(counter == backFaceButtons.length) {
+            alert("You Win!")
+        }
+
+       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         // if (gameState.numberOfFaceUpCards === 2 && gameState.firstSelected !== gameState.lastSelected) {
         //     /** @type {typeof cardObj6 | undefined } */
         //     gameState.firstSelected = backFaceButtons[i].backImg;
