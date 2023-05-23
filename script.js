@@ -12,18 +12,7 @@ const btn5 = document.querySelector('#btn5')
 const btn6 = document.querySelector('#btn6')
 
 
-// the three grand rules of coding according to javis friend
-// 1. make it work
-
-
-
-
-// 2. rule number make pretty
-// 3. make run fast
-
 const BACKIMG_URL = 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/card-back.png?raw=true'
-
-
 
 const cardObj1 = {
     backImg: BACKIMG_URL,
@@ -76,36 +65,26 @@ const gameState = {
     /** @type {typeof cardObj6 | undefined } */
     firstSelected: undefined,
 
-    // selected: []
 }
 
 
-// const backButtons = document.querySelectorAll('.backbutton');
-// const backFaceButtons = [btn1, btn2, btn3, btn4, btn5, btn6]
+
 const backFaceButtons = [cardObj1, cardObj2, cardObj3, cardObj4, cardObj5, cardObj6];
 
 
-
-
+//starting with 0, going through array of backFaceButtons ^
 for(let i = 0; i < backFaceButtons.length; i++) {
-    //we starty off with all the buttons w/ backface images
+    //backface buttons (btn#) image source = backImg outlined in object above
     backFaceButtons[i].element.querySelector('.back-face').src = backFaceButtons[i].backImg;
     //we're adding an eventListener to btn#. when it's clicked
     backFaceButtons[i].element.addEventListener('click', () => {
-        
-        // if (backFaceButtons[i].element.disabled) {
-        //     return;
-        // } else {
-            //the btn# is disabled
-            backFaceButtons[i].element.disabled = true;
-        // }
-
-        
-        //then, we're changing the backbutton image to the front image
-        backFaceButtons[i].element.querySelector('.back-face').src = backFaceButtons[i].frontImg;
+    //the btn# is disabled if it has already been clicked (cant click same button twice and have it register anything)
+    backFaceButtons[i].element.disabled = true;
+    //then, we're changing the backbutton image to the front image
+    backFaceButtons[i].element.querySelector('.back-face').src = backFaceButtons[i].frontImg;
     
-        //the number of faceupcards = number of faceupcards +1
-        gameState.numberOfFaceUpCards = gameState.numberOfFaceUpCards + 1;
+    //the number of faceupcards = number of faceupcards +1
+    gameState.numberOfFaceUpCards = gameState.numberOfFaceUpCards + 1;
         
 
         // -------------*****************************----------------------//
@@ -144,7 +123,7 @@ for(let i = 0; i < backFaceButtons.length; i++) {
             gameState.firstSelected.element.style.opacity = 0; 
             gameState.lastSelected.element.style.opacity = 0;  
             gameState.numberOfFaceUpCards = 0
-        } , 2000);
+        } , 1000);
     }
             
             // /** @type {typeof cardObj6 | undefined } */
@@ -160,13 +139,15 @@ for(let i = 0; i < backFaceButtons.length; i++) {
             // gameState.lastSelected.frontImg = gameState.lastSelected.backImg
             gameState.firstSelected.element.disabled = false;
             gameState.lastSelected.element.disabled = false;
-            gameState.numberOfFaceUpCards = 0;
+            gameState.numberOfFaceUpCards = 0;s
         }, 1500);
     }
 
 
 
        //@@@@@@@@@@@ //check if all card opacity === 0 @@@@@@@@@@//
+       setTimeout(()=>{
+       
        let counter = 0
 
         for(let i = 0; i < backFaceButtons.length; i++) {
@@ -180,6 +161,7 @@ for(let i = 0; i < backFaceButtons.length; i++) {
         if(counter == backFaceButtons.length) {
             alert("You Win!")
         }
+    }, 2000);
     })}
 
        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
