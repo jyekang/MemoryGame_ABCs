@@ -126,6 +126,7 @@ for(let i = 0; i < backFaceButtons.length; i++) {
         
         //shuffle object ; and then render
         //if the numberof faceup cards is one, then 
+       
         if (gameState.numberOfFaceUpCards === 1) {
             gameState.firstSelected = backFaceButtons[i];
         
@@ -135,17 +136,35 @@ for(let i = 0; i < backFaceButtons.length; i++) {
         
             // console.log('second selected is ', backFaceButtons[i].frontImg)
         }
-
+      
+      
         if (gameState.numberOfFaceUpCards === 2 && gameState.firstSelected.frontImg === gameState.lastSelected.frontImg) {
+            setTimeout(()=>{
             /** @type {typeof cardObj6 | undefined } */
             gameState.firstSelected.element.style.opacity = 0; 
             gameState.lastSelected.element.style.opacity = 0;  
             gameState.numberOfFaceUpCards = 0
+        } , 2000);
+    }
             
             // /** @type {typeof cardObj6 | undefined } */
             // gameState.lastSelected = backFaceButtons[i].backImg;
             // backFaceButtons[i].element.disabled = false;
-        }
+        
+//@@@@@@@@@@@@@@@@ if two cards are turned over and front images do not match, change the image back to back image url @@@@@@@@@@@@//
+        if (gameState.numberOfFaceUpCards === 2 && gameState.firstSelected.frontImg !== gameState.lastSelected.frontImg) {
+            setTimeout(()=>{
+             /** @type {typeof cardObj6 | undefined } */
+            gameState.firstSelected.element.querySelector('.back-face').src = gameState.firstSelected.backImg;
+            gameState.lastSelected.element.querySelector('.back-face').src = gameState.lastSelected.backImg;
+            // gameState.lastSelected.frontImg = gameState.lastSelected.backImg
+            gameState.firstSelected.element.disabled = false;
+            gameState.lastSelected.element.disabled = false;
+            gameState.numberOfFaceUpCards = 0;
+        }, 1500);
+    }
+
+
 
        //@@@@@@@@@@@ //check if all card opacity === 0 @@@@@@@@@@//
        let counter = 0
@@ -161,6 +180,7 @@ for(let i = 0; i < backFaceButtons.length; i++) {
         if(counter == backFaceButtons.length) {
             alert("You Win!")
         }
+    })}
 
        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         // if (gameState.numberOfFaceUpCards === 2 && gameState.firstSelected !== gameState.lastSelected) {
@@ -178,7 +198,7 @@ for(let i = 0; i < backFaceButtons.length; i++) {
 //@@@@@@@@@ this is where the commented out note section was @@@@@@@@@//
 
         
-})};
+
     
 
 
@@ -203,5 +223,6 @@ for(let i = 0; i < backFaceButtons.length; i++) {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//  
     
 
-//do we need to define front image? 
-//what is making the first card chagne?
+
+
+
