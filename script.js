@@ -71,6 +71,17 @@ const gameState = {
 
 const backFaceButtons = [cardObj1, cardObj2, cardObj3, cardObj4, cardObj5, cardObj6];
 
+// function that called shuffle
+
+// in taht function ur gonna create an array of all the available indices const arrOfIndices = [0, 1, 2, 3, 4, 5], and an empty arr shufffledIndicesArr []
+
+// for (let i = 0; arrOfIndices.length === 0; i)
+    // randomly pick an index from the array; Math.round(Math.random() * (arrOfIndices.length - 1))   3
+    // then remove that randomly index from arrOfIndices, add it to shufffledIndicesArr [0, 1, 3, 4, 5], [2]
+
+
+
+const userClickAgain = true;
 
 //starting with 0, going through array of backFaceButtons ^
 for(let i = 0; i < backFaceButtons.length; i++) {
@@ -119,11 +130,12 @@ for(let i = 0; i < backFaceButtons.length; i++) {
       
         if (gameState.numberOfFaceUpCards === 2 && gameState.firstSelected.frontImg === gameState.lastSelected.frontImg) {
             setTimeout(()=>{
-            /** @type {typeof cardObj6 | undefined } */
-            gameState.firstSelected.element.style.opacity = 0; 
-            gameState.lastSelected.element.style.opacity = 0;  
-            gameState.numberOfFaceUpCards = 0
-        } , 1000);
+                /** @type {typeof cardObj6 | undefined } */
+                gameState.firstSelected.element.style.opacity = 0; 
+                gameState.lastSelected.element.style.opacity = 0;  
+                } , 1000);
+                gameState.numberOfFaceUpCards = 0
+            
     }
             
             // /** @type {typeof cardObj6 | undefined } */
@@ -137,10 +149,11 @@ for(let i = 0; i < backFaceButtons.length; i++) {
             gameState.firstSelected.element.querySelector('.back-face').src = gameState.firstSelected.backImg;
             gameState.lastSelected.element.querySelector('.back-face').src = gameState.lastSelected.backImg;
             // gameState.lastSelected.frontImg = gameState.lastSelected.backImg
-            gameState.firstSelected.element.disabled = false;
+             }, 1500);
+             gameState.firstSelected.element.disabled = false;
             gameState.lastSelected.element.disabled = false;
-            gameState.numberOfFaceUpCards = 0;s
-        }, 1500);
+            gameState.numberOfFaceUpCards = 0;
+       
     }
 
 
