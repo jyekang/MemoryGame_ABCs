@@ -1,3 +1,32 @@
+body {
+    background-image: url(./Images/ABCBackground.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#restart {
+    font-size: 20px;
+    color: white;
+    background-color: rgb(149, 79, 149);
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgb(149, 79, 149);
+   
+}
+
+#shuffle {
+    font-size: 20px;
+    color: white;
+    background-color: rgb(149, 79, 149);
+    border: 1px solid rgb(149, 79, 149);
+    width: 100px;
+    height: 50px;
+
+}
+header {
+    align: center;
+    justify-content: center;
+}
 .backbutton {
     height: 200px;
     width: 200x;
@@ -9,10 +38,40 @@
 img {
     height: 200px;
     width: 200px;
+    justify-content: center;
+    align:center;
 }
 
-body {
-    background-image: url(./Images/ABCBackground.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
+h1{
+    text-align: center;
 }
+
+
+
+.backbutton {
+    border: 3px solid gold;
+    background-color: white;
+    background-size: 100%;
+    
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 200px;
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    
+}
+
+.btn1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.btn2 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
