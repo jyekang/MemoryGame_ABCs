@@ -10,13 +10,13 @@ const btn4 = document.querySelector('#btn4')
 const btn5 = document.querySelector('#btn5')
 /** @type {HTMLButtonElement} */
 const btn6 = document.querySelector('#btn6')
-
-
+const restart = document.querySelector('#restart')
+const shuffle = document.querySelector('#shuffle')
 const BACKIMG_URL = 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/card-back.png?raw=true'
 
 const cardObj1 = {
     backImg: BACKIMG_URL,
-    frontImg: 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/archer-intro.gif?raw=true',
+    frontImg: 'https://www.vecteezy.com/vector-art/23959969-a-letter-tracing-english-alphabet-tracing-worksheet',
     element: btn1,
     isFrontImg: 0,
     isBackImg: 1
@@ -68,22 +68,21 @@ const gameState = {
 }
 
 
-
 const backFaceButtons = [cardObj1, cardObj2, cardObj3, cardObj4, cardObj5, cardObj6];
+// ***********@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*********
+// function called shuffle
 
-// function that called shuffle
-
-// in taht function ur gonna create an array of all the available indices const arrOfIndices = [0, 1, 2, 3, 4, 5], and an empty arr shufffledIndicesArr []
+// in taht function create an array of all the available indices const arrOfIndices = [0, 1, 2, 3, 4, 5], and an empty arr shufffledIndicesArr []
 
 // for (let i = 0; arrOfIndices.length === 0; i)
     // randomly pick an index from the array; Math.round(Math.random() * (arrOfIndices.length - 1))   3
     // then remove that randomly index from arrOfIndices, add it to shufffledIndicesArr [0, 1, 3, 4, 5], [2]
 
-
-
+//starting with 0, going through array of backFaceButtons ^ 
 const userClickAgain = true;
+//**********@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*************
 
-//starting with 0, going through array of backFaceButtons ^
+
 for(let i = 0; i < backFaceButtons.length; i++) {
     //backface buttons (btn#) image source = backImg outlined in object above
     backFaceButtons[i].element.querySelector('.back-face').src = backFaceButtons[i].backImg;
@@ -94,28 +93,12 @@ for(let i = 0; i < backFaceButtons.length; i++) {
     //then, we're changing the backbutton image to the front image
     backFaceButtons[i].element.querySelector('.back-face').src = backFaceButtons[i].frontImg;
     
-    //the number of faceupcards = number of faceupcards +1
+    //the number of faceupcards = number of faceupcards +1; keeping track of how many cards are faceup
     gameState.numberOfFaceUpCards = gameState.numberOfFaceUpCards + 1;
         
 
         // -------------*****************************----------------------//
-        
-        //if the number of faceupcards reaches 2 and the front images for first selected and last selected do not match, 
-        //then change the image source to the backface and make sure we can click it again (click disabled is false)
-        //or can we say if first and second do not match (not including frong image)
-
-        //if the number of face cards === 2 and the first and last selected match, remove/hide cards?
-
-        //when all 6 cards are hidden, prompt restart button? alert restart button?
-
-        //.remove .add 
-
-        //shuffling cards
-
-        //when 
-        
-        //shuffle object ; and then render
-        //if the numberof faceup cards is one, then 
+    
        
         if (gameState.numberOfFaceUpCards === 1) {
             gameState.firstSelected = backFaceButtons[i];
@@ -149,9 +132,9 @@ for(let i = 0; i < backFaceButtons.length; i++) {
             gameState.firstSelected.element.querySelector('.back-face').src = gameState.firstSelected.backImg;
             gameState.lastSelected.element.querySelector('.back-face').src = gameState.lastSelected.backImg;
             // gameState.lastSelected.frontImg = gameState.lastSelected.backImg
-             }, 1500);
-             gameState.firstSelected.element.disabled = false;
+            gameState.firstSelected.element.disabled = false;
             gameState.lastSelected.element.disabled = false;
+            }, 1500);
             gameState.numberOfFaceUpCards = 0;
        
     }
@@ -189,34 +172,9 @@ for(let i = 0; i < backFaceButtons.length; i++) {
         // }
         //
 
-        
-//@@@@@@@@@ this is where the commented out note section was @@@@@@@@@//
 
         
 
-    
-
-
-//@@@@@@@@@@@@@@ NOTE FOR ABOVE SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@//
-// //if the numberof faceup cards is one, then 
-// if (gameState.numberOfFaceUpCards === 1) {
-//     gameState.firstSelected = backFaceButtons[i].element;
-
-//     // console.log('first selected is ', backFaceButtons[i].frontImg);
-// } else if (gameState.numberOfFaceUpCards === 2) {
-//     gameState.lastSelected = backFaceButtons[i]
-
-//     // console.log('second selected is ', backFaceButtons[i].frontImg)
-// }
-
-
-// if(gameState.numberOfFaceUpCards === 2 && gameState.firstSelected.frontImg === gameState.lastSelected.frontImg ){
-//     // gameState.firstSelected.element.removeEventListener('click')
-    
-//     gameState.firstSelected.element.disabled = true;
-//     gameState.lastSelected.element.disabled = true;
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//  
-    
 
 
 
