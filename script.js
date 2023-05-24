@@ -12,7 +12,7 @@ const btn5 = document.querySelector('#btn5')
 const btn6 = document.querySelector('#btn6')
 const restart = document.querySelector('#restart')
 const shuffle = document.querySelector('#shuffle')
-const BACKIMG_URL = 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/card-back.png?raw=true'
+const BACKIMG_URL = './Images/Sun.svg'
 
 const buttonV2 = [btn1, btn2, btn3, btn4, btn5, btn6]
 const shuffledButtonV2 = [...buttonV2].sort(() => Math.random() - 0.5)

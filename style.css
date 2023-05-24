@@ -12,5 +12,7 @@ img {
 }
 
 body {
-    
+    background-image: url(./Images/ABCBackground.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
