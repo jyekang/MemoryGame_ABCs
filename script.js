@@ -68,6 +68,8 @@ const gameState = {
 }
 
 
+
+
 const backFaceButtons = [cardObj1, cardObj2, cardObj3, cardObj4, cardObj5, cardObj6];
 // ***********@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*********
 // function called shuffle
@@ -139,7 +141,12 @@ for(let i = 0; i < backFaceButtons.length; i++) {
        
     }
 
-
+    restart.addEventListener('click', () => {
+        backFaceButtons[i].element.style.opacity = 1;
+        backFaceButtons[i].element.querySelector('.back-face').src = backFaceButtons[i].backImg;
+        backFaceButtons[i].element.disabled = false;
+        let counter = 0
+    })
 
        //@@@@@@@@@@@ //check if all card opacity === 0 @@@@@@@@@@//
        setTimeout(()=>{
