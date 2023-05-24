@@ -14,45 +14,52 @@ const restart = document.querySelector('#restart')
 const shuffle = document.querySelector('#shuffle')
 const BACKIMG_URL = 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/card-back.png?raw=true'
 
+const buttonV2 = [btn1, btn2, btn3, btn4, btn5, btn6]
+const shuffledButtonV2 = [...buttonV2].sort(() => Math.random() - 0.5)
+
+
+
+
 const cardObj1 = {
     backImg: BACKIMG_URL,
-    frontImg: 'https://www.vecteezy.com/vector-art/23959969-a-letter-tracing-english-alphabet-tracing-worksheet',
-    element: btn1,
+    frontImg: './Images/A.svg', 
+    // frontImg: 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/archer-intro.gif?raw=true',
+    element: shuffledButtonV2[0],
     isFrontImg: 0,
     isBackImg: 1
 };
 const cardObj2 = {
     backImg: BACKIMG_URL,
-    frontImg: 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/archer-intro.gif?raw=true',
-    element: btn2,
+    frontImg: './Images/A.svg',
+    element: shuffledButtonV2[1],
     isFrontImg: 0,
     isBackImg: 1
 };
 const cardObj3 = {
     backImg: BACKIMG_URL,
-    frontImg: 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/ninja-slashing.gif?raw=true',
-    element: btn3,
+    frontImg: './Images/B.svg',
+    element: shuffledButtonV2[2],
     isFrontImg: 0,
     isBackImg: 1
 };
 const cardObj4 = {
     backImg: BACKIMG_URL,
-    frontImg: 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/ninja-slashing.gif?raw=true',
-    element: btn4,
+    frontImg: './Images/B.svg',
+    element: shuffledButtonV2[3],
     isFrontImg: 0,
     isBackImg: 1
 };
 const cardObj5 = {
     backImg: BACKIMG_URL,
-    frontImg: 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/pirate-slashing.gif?raw=true',
-    element: btn5,
+    frontImg: './Images/C.svg',
+    element: shuffledButtonV2[4],
     isFrontImg: 0,
     isBackImg: 1
 };
 const cardObj6 = {
     backImg: BACKIMG_URL,
-    frontImg: 'https://github.com/dae-hyun-kim/recruit-and-conquer/blob/master/images/pirate-slashing.gif?raw=true',
-    element: btn6,
+    frontImg: './Images/C.svg',
+    element: shuffledButtonV2[5],
     isFrontImg: 0,
     isBackImg: 1
 };
@@ -67,10 +74,13 @@ const gameState = {
 
 }
 
+shuffle.addEventListener('click', () => {
+    window.location.reload()
+})
 
-
-
+//does this need to be here? was it used?
 const backFaceButtons = [cardObj1, cardObj2, cardObj3, cardObj4, cardObj5, cardObj6];
+
 // ***********@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*********
 // function called shuffle
 
@@ -81,7 +91,10 @@ const backFaceButtons = [cardObj1, cardObj2, cardObj3, cardObj4, cardObj5, cardO
     // then remove that randomly index from arrOfIndices, add it to shufffledIndicesArr [0, 1, 3, 4, 5], [2]
 
 //starting with 0, going through array of backFaceButtons ^ 
+
+//double check where this is used
 const userClickAgain = true;
+
 //**********@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*************
 
 
