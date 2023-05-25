@@ -2,16 +2,16 @@ body {
     background-image: url(./Images/ABCBackground.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
 }
 
 #restart {
     font-size: 20px;
     color: white;
     background-color: rgb(149, 79, 149);
-    width: 100px;
+    width: 150px;
     height: 50px;
     border: 1px solid rgb(149, 79, 149);
-   
 }
 
 #shuffle {
@@ -19,40 +19,56 @@ body {
     color: white;
     background-color: rgb(149, 79, 149);
     border: 1px solid rgb(149, 79, 149);
-    width: 100px;
+    width: 150px;
     height: 50px;
-
 }
+
 header {
     align: center;
     justify-content: center;
+    font-family: 'Inter', sans-serif;
 }
+
 .backbutton {
     height: 200px;
     width: 200x;
 }
+
 .back-face {
     height: 200px;
     width: 200px;
 }
+
 img {
     height: 200px;
     width: 200px;
     justify-content: center;
-    align:center;
+    align: center;
 }
 
-h1{
+header {
     text-align: center;
+    color: rgb(11, 80, 145);
+    font-size: 60px;
+    margin-top: 50px;
 }
 
+#controls {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
 
+}
 
 .backbutton {
     border: 3px solid gold;
     background-color: white;
     background-size: 100%;
-    
+}
+
+.backbutton img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #buttons {
@@ -62,16 +78,10 @@ h1{
     grid-gap: 20px;
     justify-content: center;
     align-content: center;
-    height: 100vh;
-    
+    margin-top: 100px;
+    font-family: 'Inter', sans-serif;
 }
 
-.btn1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
+span {
+    font-size: 30px;
 }
-.btn2 {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
