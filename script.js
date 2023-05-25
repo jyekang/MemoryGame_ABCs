@@ -86,7 +86,6 @@ for(let i = 0; i < backFaceButtons.length; i++) {
         backFaceButtons[i].element.querySelector('.back-face').src = backFaceButtons[i].frontImg;
         gameState.numberOfFaceUpCards = gameState.numberOfFaceUpCards + 1;
         
-
         if (gameState.numberOfFaceUpCards === 1) {
             gameState.firstSelected = backFaceButtons[i];
         

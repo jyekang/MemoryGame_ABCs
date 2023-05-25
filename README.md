@@ -1,9 +1,10 @@
 # MemoryGame_ABCs
 
-## Objective
-To create an interactive, educational game that will help children (ages 2+) recognize and learn the letters of the alphabet
-
 ## Game Description
+The objective of the game is to flip over pairs of cards and find the matching pairs. 
+
+
+## How To
 * The game starts with an even number of cards placed face down.
 
 <img width="243" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/feb4e472-5746-477e-85c4-c573619ab47e">
@@ -31,13 +32,11 @@ To create an interactive, educational game that will help children (ages 2+) rec
 <img width="591" alt="image" src="https://github.com/jyekang/MemoryGame_ABCs/assets/132427360/3f7b7a8d-85b1-46b3-8bcd-6110ec9d01a0">
 
 
+* Continue until all cards are removed from the board.
 
 
-## How to Get Started
-* Research: online, peers, office hours
-* Find a skeleton plan that seems replicable based on current knowledge of CSS, JS, HTML
-* Create detailed outline: pesudocoding + wireframing
-* GO, GO, GO!
+### Credits
+* Kevin L., Jordan B., Vincent V., Dae K., Javi and Tania
 
-## Project Timeline
+### Project Timeline
 * https://trello.com/invite/b/YXoPgLF7/ATTIef86fa6922cc1910bc9192a34ea6624bA0DA0BD2/matchinggameabcs
